@@ -1,0 +1,4 @@
+.env
+google-sheets-api.json
+__pycache__/
+*.csv
