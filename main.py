@@ -7,7 +7,7 @@ from utils.extract import scrape_fashion_studio
 from utils.transform import transform_data
 from utils.load import load_to_csv, load_to_gsheets, load_to_postgres
 
-# Memuat variabel rahasia dari file .env
+# Memuat variabel dari file .env
 load_dotenv()
 
 def hasil_data(df):
