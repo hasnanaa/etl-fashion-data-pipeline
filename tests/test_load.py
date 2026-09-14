@@ -30,7 +30,7 @@ def test_load_to_gsheets(mock_gspread):
     mock_gspread.return_value = mock_client
     
     df = pd.DataFrame({'Test': [1, 2, 3]})
-    # Asumsi fungsi Anda: load_to_gsheets(df, json_key, url)
+    # Fungsi: load_to_gsheets(df, json_key, url)
     try:
         load_to_gsheets(df, 'dummy.json', 'http://dummy.url')
         assert mock_client.open_by_url.called
@@ -45,7 +45,7 @@ def test_load_to_postgres(mock_create_engine, mock_to_sql):
     
     df = pd.DataFrame({'Test': [1, 2, 3]})
     try:
-        # Asumsi fungsi Anda: load_to_postgres(df, db_uri, table_name)
+        # Fungsi: load_to_postgres(df, db_uri, table_name)
         load_to_postgres(df, 'sqlite:///:memory:', 'dummy_table')
         mock_create_engine.assert_called()
         mock_to_sql.assert_called()
