@@ -3,13 +3,13 @@ import pandas as pd
 from unittest.mock import patch, MagicMock
 from requests.exceptions import RequestException
 
-# Mengimpor fungsi dari extract.py Anda
+# Mengimpor fungsi dari extract.py
 from utils.extract import scrape_fashion_studio 
 
 # HANYA memalsukan fungsi .get() agar library error tetap asli
 @patch('utils.extract.requests.get')
 def test_scrape_main_success(mock_get):
-    # Menggunakan <h3> sesuai dengan kode extract.py Anda
+    # Menggunakan <h3> sesuai dengan kode extract.py
     mock_html = """
     <div class="collection-card">
         <h3 class="product-title">Baju Kaos Test</h3>
